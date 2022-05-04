@@ -23,7 +23,7 @@ def create_app():
 
     from .models import User, Note
 
-    # create_database(app)
+    create_database(app)
 
     login_manager = LoginManager()
     login_manager.login_view = 'auth.login'
@@ -45,3 +45,6 @@ def create_database(app):
     if not path.exists(DB_NAME):
         db.create_all(app=app)
         print('Created Database!')
+    else:
+        print('Not Created Database!')
+
