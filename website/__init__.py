@@ -42,5 +42,5 @@ def create_database(app):
         db.create_all(app=app)
         print('Created Database! ' + path.realpath(DB_NAME))
 
-    print('Database Exists! ' + path.realpath(DB_NAME))
+    print('Database Exists! ' + path.realpath('website/' + DB_NAME))
 
