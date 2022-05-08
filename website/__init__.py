@@ -23,6 +23,7 @@ def create_app():
 
     from .models import User, Note
 
+    print('Creating Database!')
     create_database(app)
 
     login_manager = LoginManager()
@@ -39,6 +40,7 @@ def create_app():
 def create_database(app):
     if not path.exists('website/' + DB_NAME):
         db.create_all(app=app)
-        print('Created Database!')
+        print('Created Database! ' + path.realpath(DB_NAME))
 
+    print('Database Exists! ' + path.realpath(DB_NAME))
 
