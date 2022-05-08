@@ -41,6 +41,6 @@ def create_database(app):
     if not path.exists('website/' + DB_NAME):
         db.create_all(app=app)
         print('Created Database! ' + path.realpath(DB_NAME))
-
-    print('Database Exists! ' + path.realpath('website/' + DB_NAME))
+    else:
+        print('Database Exists! ' + path.realpath('website/' + DB_NAME))
 
